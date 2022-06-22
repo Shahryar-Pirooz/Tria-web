@@ -4,17 +4,25 @@ $background: #fdfefe;
 $text: #191919;
 $shadow: #3e3c41;
 $gradient: linear-gradient(62.09deg, #388CE7 -9.13%, #399FD9 51%, #3BDEA8 132.83%);
+$radius: 100px;
 
 
 @mixin btn($color) {
     background-color: $color;
     border-color: $color;
-    border-radius: 100px;
+    border-radius: $radius;
     font-weight: bold;
     color: $background;
+    transition: 0.5s;
 
     &:hover {
-        background-color: darken($color: $color, $amount: 20%);
+        background-color: lighten($color: $color, $amount: 10%);
+        transform: scale(1.05);
+    }
+
+    &:active {
+        background-color: darken($color: $color, $amount: 10%);
+        transform: scale(1);
     }
 }
 
@@ -24,55 +32,55 @@ body {
     background-color: $background;
 }
 
-h1 {
+h1,
+h2,
+h3 {
+    font-weight: bolder;
+
     .tria {
         font-size: larger;
     }
 }
 
-h2,
-h3,
-h4,
-li {
-
+h5 {
     font-weight: bold;
 }
+
 
 .tria {
     font-size: xx-large;
     font-weight: bold;
     color: $primary;
+    transition: 1s;
+
 
     &:hover {
         color: $secondary;
-        transition: 2s;
     }
 }
 
 
-a.btn.btn-primary+.btn-primary {
+.btn.btn-primary {
     @include btn($primary);
 }
 
-a.btn.btn-success {
+.btn.btn-success {
     @include btn($secondary);
 }
 
 .form-control {
-    border-radius: 100px;
-}
-
-%section {
-    background-color: $background;
-    height: 90vh;
+    border-radius: $radius;
 }
 
 .section-white {
-    @extend %section;
+    background-color: $background;
+
+    @media screen and (max-width: 768px) {
+        height: 84vh;
+    }
 }
 
 .section-blue {
-    @extend %section;
     background-color: $primary;
     background-image: url(./images/bg.svg);
     background-repeat: no-repeat;
@@ -80,12 +88,14 @@ a.btn.btn-success {
     background-position: bottom center, 50%, 50%;
 
     .glassmorphism {
-        @extend %section;
+        width: 80%;
+        height: auto;
         background: rgba(255, 255, 255, 0.15);
         box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.05);
         backdrop-filter: blur(9.5px);
         -webkit-backdrop-filter: blur(9.5px);
-        border-radius: 100px;
+        border-radius: $radius;
+        margin: 5% 2%;
     }
 }
 
@@ -107,17 +117,53 @@ a.btn.btn-success {
     transition: 100ms;
 }
 
-@media (max-width: 991px) {
-    .img-mini {
-        width: 10vw;
-        height: auto;
-        margin-top: 10px;
+@mixin img($precent: 50%) {
+    width: $precent;
+    height: auto;
+    display: block;
+}
+
+.logo {
+    @include img(6%);
+
+    @media screen and (max-width: 768px) {
+        @include img(10%);
     }
 }
 
-@media (min-width: 992px) {
-    .img-mini {
-        width: 6vw;
-        height: auto;
+.hero {
+    @include img(100%);
+}
+
+.img-mini {
+    @include img(20%);
+}
+
+.help-text {
+    font-size: 1em;
+    margin: 1em;
+}
+
+#snackbar-side {
+    position: fixed;
+    width: 100%;
+    justify-self: center;
+    justify-content: center;
+    display: flex;
+    bottom: -100%;
+    background-color: $primary;
+    transition: 1s;
+
+    &.show {
+        bottom: 0%;
     }
+}
+
+#snackbar-body {
+    color: $background;
+    font-weight: bolder;
+    width: 100%;
+    justify-content: center;
+    font-size: 1em;
+    padding: 1em 0em;
 }
