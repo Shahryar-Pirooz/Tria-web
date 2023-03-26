@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer base {
+    @font-face {
+        font-family: 'Figtree';
+        font-style: normal;
+        font-weight: 400 800;
+        font-display: swap;
+        src: url(./fonts/Figtree-VariableFont_wght.ttf) format('truetype');
+    }
+
+    html,
+    body {
+        font-family: 'Figtree', sans-serif;
+    }
+}
+@layer components {
+    html,
+    body {
+        @apply bg-white;
+    }
+}
