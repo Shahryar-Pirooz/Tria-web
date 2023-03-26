@@ -20,4 +20,19 @@
     body {
         @apply bg-white;
     }
+    .navbar {
+        @apply flex flex-col px-12 py-3 shadow-md md:flex-row;
+    }
+    .logo-side {
+        @apply flex flex-none justify-center;
+    }
+    .btn-menu {
+        @apply absolute top-0 right-0 flex p-5 md:hidden;
+    }
+    .nav-items {
+        @apply mt-5 flex flex-1 flex-col items-start space-y-3 overflow-hidden capitalize transition-[height] duration-1000 md:mx-6 md:mt-0 md:flex-row md:items-end md:space-x-3;
+    }
+    .nav-item {
+        @apply w-full text-center text-base text-black transition-all duration-500 hover:text-blue md:w-fit md:text-sm;
+    }
 }
