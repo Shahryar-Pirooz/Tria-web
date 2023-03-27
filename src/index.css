@@ -21,7 +21,7 @@
         @apply bg-white;
     }
     .navbar {
-        @apply flex flex-col px-12 py-3 shadow-md md:flex-row;
+        @apply top-0 right-0 flex w-screen flex-col bg-white px-12 py-3 shadow-md md:absolute md:flex-row;
     }
     .logo-side {
         @apply flex flex-none justify-center;
@@ -34,5 +34,33 @@
     }
     .nav-item {
         @apply w-full text-center text-base text-black transition-all duration-500 hover:text-blue md:w-fit md:text-sm;
+    }
+    .hero {
+        @apply flex h-screen flex-col justify-center px-3 md:flex-row md:flex-nowrap md:px-12;
+    }
+    .hero-text-side {
+        @apply flex h-full w-full flex-1 flex-col justify-center space-y-3 text-center md:text-start;
+    }
+    .hero-image-side {
+        @apply -mt-32 flex  h-full w-full flex-1 justify-center md:mt-0;
+    }
+    .hero-title {
+        @apply text-3xl font-extrabold leading-snug tracking-tight md:text-[2.8rem];
+    }
+    .hero-description {
+        @apply text-base font-medium;
+    }
+    .buttons {
+        @apply flex flex-row flex-nowrap justify-center space-x-3 md:justify-start;
+    }
+    .btn-green,
+    .btn-blue {
+        @apply rounded-full py-1 px-4 text-base font-semibold capitalize text-white;
+    }
+    .btn-blue {
+        @apply bg-blue;
+    }
+    .btn-green {
+        @apply bg-green;
     }
 }
