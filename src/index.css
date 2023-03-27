@@ -67,4 +67,34 @@
     .btn-green {
         @apply bg-green;
     }
+    .why-tria {
+        @apply relative h-fit min-h-full w-screen text-center text-white md:p-10;
+    }
+    .why-tria-background {
+        @apply flex h-full w-full flex-col space-y-10 rounded-[3rem] bg-opacity-20 bg-gradient-to-tr from-[#388CE7]/75 via-[#399FD9]/75 to-[#3BDEA8]/75 bg-clip-padding py-10 px-5 backdrop-blur-sm backdrop-filter;
+    }
+    .star1 {
+        @apply absolute right-1/2 -top-36;
+    }
+    .star2 {
+        @apply absolute -left-32 top-52;
+    }
+    .star3 {
+        @apply absolute -bottom-32 right-0 rotate-45;
+    }
+    .why-tria-title {
+        @apply w-full text-3xl font-semibold;
+    }
+    .why-tria-cards {
+        @apply flex flex-col flex-nowrap justify-around space-y-10 md:flex-row md:space-x-10;
+    }
+    .why-tria-card {
+        @apply flex flex-1 flex-col justify-center space-y-2;
+    }
+    .why-tria-card-title {
+        @apply text-xl font-extrabold;
+    }
+    .why-tria-card-title2 {
+        @apply text-lg font-semibold;
+    }
 }

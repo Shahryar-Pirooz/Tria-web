@@ -25,23 +25,19 @@ export default function WhyTria() {
     ]
     return (
         <div className="relative">
-            <img className="absolute right-1/2 -top-36" src={star} alt="" />
-            <img className="absolute -left-32 top-52" src={star} alt="" />
-            <img
-                className="absolute -bottom-32 right-0 rotate-45"
-                src={star}
-                alt=""
-            />
-            <div className="relative h-fit min-h-full w-screen text-center text-white md:p-10">
-                <div className=" flex h-full w-full flex-col space-y-10 rounded-[3rem] bg-opacity-20 bg-gradient-to-tr from-[#388CE7]/75 via-[#399FD9]/75 to-[#3BDEA8]/75 bg-clip-padding py-10 px-5 backdrop-blur-sm backdrop-filter">
-                    <h3 className="w-full text-3xl font-semibold">
+            <img className="star1" src={star} alt="star" aria-hidden />
+            <img className="star2" src={star} alt="star" aria-hidden />
+            <img className="star3" src={star} alt="star" aria-hidden />
+            <div className="why-tria">
+                <div className="why-tria-background">
+                    <h3 className="why-tria-title">
                         And the question is ...{' '}
                         <span className="font-bold">Why Tria?</span>
                     </h3>
-                    <div className="flex flex-col flex-nowrap justify-around space-y-10 md:flex-row md:space-x-10">
+                    <div className="why-tria-cards">
                         {cards.map((card) => {
                             return (
-                                <div className="flex flex-1 flex-col justify-center space-y-2">
+                                <div className="why-tria-card">
                                     <img
                                         className="max-h-36"
                                         src={card.img}
@@ -51,9 +47,9 @@ export default function WhyTria() {
                                         dangerouslySetInnerHTML={{
                                             __html: card.title1,
                                         }}
-                                        className="text-xl font-extrabold"
+                                        className="why-tria-card-title"
                                     ></h3>
-                                    <p className="font-lg font-semibold">
+                                    <p className="why-tria-card-title2">
                                         {card.title2}
                                     </p>
                                     <p
