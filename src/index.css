@@ -26,7 +26,7 @@
         @apply bg-white transition-all duration-1000;
     }
     .app {
-        @apply h-scree w-screen;
+        @apply h-screen w-screen overflow-y-auto overflow-x-hidden;
     }
     .navbar {
         @apply top-0 right-0 flex w-screen flex-col bg-white px-32 py-5 shadow-md duration-1000 md:flex-row;
