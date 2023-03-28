@@ -15,7 +15,7 @@ export default function NavBar() {
     return (
         <nav className="navbar">
             <div className="logo-side">
-                <img className="h-8" src={logo} alt="Tria logo" />
+                <img className="h-12" src={logo} alt="Tria logo" />
                 <div className="btn-menu">
                     <button
                         onClick={() => {

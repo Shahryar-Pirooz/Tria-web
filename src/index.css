@@ -12,6 +12,7 @@
 
     html,
     body {
+        font-size: 18px;
         overflow-x: hidden;
         font-family: 'Figtree', sans-serif;
     }
@@ -22,10 +23,13 @@
 @layer components {
     html,
     body {
-        @apply bg-white;
+        @apply bg-white transition-all duration-1000;
+    }
+    .app {
+        @apply h-scree w-screen;
     }
     .navbar {
-        @apply top-0 right-0 flex w-screen flex-col bg-white px-12 py-3 shadow-md md:absolute md:flex-row;
+        @apply top-0 right-0 flex w-screen flex-col bg-white px-32 py-5 shadow-md duration-1000 md:flex-row;
     }
     .logo-side {
         @apply flex flex-none justify-center;
@@ -34,19 +38,19 @@
         @apply absolute top-0 right-0 flex p-5 md:hidden;
     }
     .nav-items {
-        @apply mt-5 flex flex-1 flex-col items-start space-y-3 overflow-hidden capitalize transition-[height] duration-1000 md:mx-6 md:mt-0 md:flex-row md:items-end md:space-x-3;
+        @apply mt-5 flex flex-1 flex-col items-start space-y-3 overflow-hidden capitalize duration-1000 md:mx-12 md:mt-0 md:flex-row md:items-end md:space-x-10;
     }
     .nav-item {
-        @apply w-full text-center text-base text-black transition-all duration-500 hover:text-blue md:w-fit md:text-sm;
+        @apply w-full text-center text-lg font-bold text-black duration-500 hover:text-blue md:w-fit md:text-sm;
     }
     .hero {
-        @apply flex h-screen flex-col justify-center px-3 md:flex-row md:flex-nowrap md:pl-12 md:pr-0;
+        @apply my-5 flex min-w-full flex-col items-center justify-center px-3 md:flex-row md:flex-nowrap md:pl-32 md:pr-0;
     }
     .hero-text-side {
         @apply flex h-full w-full flex-1 flex-col justify-center space-y-3 text-center md:text-start;
     }
     .hero-image-side {
-        @apply -mt-32 flex  h-full w-full flex-1 justify-center md:mt-0;
+        @apply flex  h-full w-full flex-1 justify-center md:mt-0;
     }
     .hero-title {
         @apply text-3xl font-extrabold leading-snug tracking-tight md:text-[2.8rem];
@@ -74,19 +78,19 @@
         @apply flex h-full w-full flex-col space-y-10 rounded-[3rem] bg-opacity-20 bg-gradient-to-tr from-[#388CE7]/75 via-[#399FD9]/75 to-[#3BDEA8]/75 bg-clip-padding py-10 px-5 backdrop-blur-sm backdrop-filter;
     }
     .star1 {
-        @apply absolute right-1/2 -top-36;
+        @apply absolute right-1/2 -top-36 hidden md:flex;
     }
     .star2 {
-        @apply absolute -left-32 top-52;
+        @apply absolute -left-32 top-52 hidden md:flex;
     }
     .star3 {
-        @apply absolute -bottom-32 right-0 rotate-45;
+        @apply absolute -bottom-32 right-0 hidden rotate-45 md:flex;
     }
     .why-tria-title {
         @apply w-full text-3xl font-semibold;
     }
     .why-tria-cards {
-        @apply flex flex-col flex-nowrap justify-around space-y-10 md:flex-row md:space-x-10;
+        @apply flex flex-col flex-nowrap items-center justify-around space-y-10 md:flex-row md:items-baseline md:space-x-10;
     }
     .why-tria-card {
         @apply flex flex-1 flex-col justify-center space-y-2;
