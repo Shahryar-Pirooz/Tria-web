@@ -35,9 +35,9 @@ export default function WhyTria() {
                         <span className="font-bold">Why Tria?</span>
                     </h3>
                     <div className="why-tria-cards">
-                        {cards.map((card) => {
+                        {cards.map((card, index) => {
                             return (
-                                <div className="why-tria-card">
+                                <div key={index} className="why-tria-card">
                                     <img
                                         className="max-h-28"
                                         src={card.img}
