@@ -2,6 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 @layer base {
+    ::-moz-selection {
+        /* Code for Firefox */
+        color: #fdfefe;
+        background: #388ce7;
+    }
+
+    ::selection {
+        color: #fdfefe;
+        background: #388ce7;
+    }
     @font-face {
         font-family: 'Figtree';
         font-style: normal;
@@ -21,15 +31,15 @@
     }
 }
 @layer components {
-    html,
+    /* html,
     body {
         @apply bg-white transition-all duration-1000;
-    }
+    } */
     .app {
         @apply h-screen w-screen overflow-y-auto overflow-x-hidden;
     }
     .navbar {
-        @apply top-0 right-0 flex w-screen flex-col bg-white px-32 py-5 shadow-md duration-1000 md:flex-row;
+        @apply relative top-0 right-0 flex w-screen flex-col bg-white px-32 py-5 shadow-md duration-1000 md:flex-row;
     }
     .logo-side {
         @apply flex flex-none justify-center;
@@ -100,5 +110,29 @@
     }
     .why-tria-card-title2 {
         @apply text-lg font-semibold;
+    }
+    .passgen {
+        @apply my-20 flex h-fit w-full flex-col md:flex-row;
+    }
+    .input-side {
+        @apply flex w-full flex-col;
+    }
+    .stars {
+        @apply w-28 max-w-min self-center;
+    }
+    .inputs {
+        @apply flex flex-col items-center space-y-4;
+    }
+    .input-group {
+        @apply flex w-full flex-col items-stretch px-10 text-start;
+    }
+    .label {
+        @apply mb-1 px-4;
+    }
+    .input {
+        @apply rounded-3xl border border-blue px-4 py-1 outline-none transition-all duration-1000;
+    }
+    .help-side {
+        @apply w-full space-y-2 px-5 py-10 text-center md:px-20 md:text-start;
     }
 }

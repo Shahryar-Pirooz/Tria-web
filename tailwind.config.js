@@ -10,6 +10,9 @@ module.exports = {
                 white: '#FDFEFE',
                 black: '#191919',
             },
+            listStyleImage: {
+                dot: 'url("/src/assets/dot.svg")',
+            },
         },
         fontFamily: {
             figtree: ['Figtree', 'sans-serif'],
