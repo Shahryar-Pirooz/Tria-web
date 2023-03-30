@@ -16,11 +16,8 @@ export default function Hero() {
                     without having to remember it!
                 </h2>
                 <div className="buttons">
-                    <a className="btn-blue" href="#help">
+                    <a className="btn-blue" href="#genpass">
                         get start
-                    </a>
-                    <a className="btn-green" href="/">
-                        app
                     </a>
                 </div>
             </div>
