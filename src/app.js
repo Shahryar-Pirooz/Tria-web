@@ -1,11 +1,13 @@
-import { Hero, NavBar, WhyTria, PasswordGenerator } from './components'
+import { Hero, NavBar, WhyTria, InputSide } from './components'
+import { PasswordGenerator } from './PassGen'
 export default function App() {
+    PasswordGenerator()
     return (
         <div className="app">
             <NavBar />
             <Hero />
             <WhyTria />
-            <PasswordGenerator />
+            <InputSide />
         </div>
     )
 }
