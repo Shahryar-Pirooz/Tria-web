@@ -1,6 +1,6 @@
 import Hero from './hero'
 import NavBar from './navbar'
 import WhyTria from './whyTria'
-import PasswordGenerator from './passwordGenerator'
+import InputSide from './inputSide'
 
-export { Hero, NavBar, WhyTria, PasswordGenerator }
+export { Hero, NavBar, WhyTria, InputSide }

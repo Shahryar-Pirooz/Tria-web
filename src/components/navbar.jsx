@@ -9,8 +9,12 @@ export default function NavBar() {
 
     const menuItems = [
         { key: 1, text: 'why tria', href: '#why_tria' },
-        { key: 2, text: 'donate', href: '#donate' },
-        { key: 3, text: 'help', href: '#help' },
+        { key: 2, text: 'donate', href: 'https://www.buymeacoffee.com/EssPi' },
+        {
+            key: 3,
+            text: 'source',
+            href: 'https://github.com/Shahryar-Pirooz/Tria-web',
+        },
     ]
     return (
         <nav className="navbar">
