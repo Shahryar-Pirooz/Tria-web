@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { stars } from '../assets'
-export default function PasswordGenerator() {
+export default function InputSide() {
     const [nameState, setNameState] = useState('')
     const [codeState, setCodeState] = useState('')
     const [domainState, setDomainState] = useState('')
