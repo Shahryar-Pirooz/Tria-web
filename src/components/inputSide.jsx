@@ -4,11 +4,8 @@ export default function InputSide() {
     const [nameState, setNameState] = useState('')
     const [codeState, setCodeState] = useState('')
     const [domainState, setDomainState] = useState('')
-    // useEffect(() => {
-    //     console.log(nameState, codeState, domainState)
-    // }, [nameState, codeState, domainState])
     return (
-        <div className="passgen">
+        <div className="passgen" id="genpass">
             <div className="input-side">
                 <img className="stars" src={stars} alt="" aria-hidden />
                 <div className="inputs">
