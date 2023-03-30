@@ -26,15 +26,18 @@
         overflow-x: hidden;
         font-family: 'Figtree', sans-serif;
     }
+    html {
+        scroll-behavior: smooth;
+    }
     body {
         overflow: hidden;
     }
 }
 @layer components {
-    /* html,
+    html,
     body {
-        @apply bg-white transition-all duration-1000;
-    } */
+        @apply scroll-smooth bg-white;
+    }
     .app {
         @apply h-screen w-screen overflow-y-auto overflow-x-hidden;
     }
@@ -48,13 +51,13 @@
         @apply absolute top-0 right-0 flex p-5 md:hidden;
     }
     .nav-items {
-        @apply mt-5 flex flex-1 flex-col items-start space-y-3 overflow-hidden capitalize duration-1000 md:mx-12 md:mt-0 md:flex-row md:items-end md:space-x-10;
+        @apply mt-5 flex flex-1 flex-col items-start space-y-3 overflow-hidden capitalize transition-all duration-1000 md:mx-12 md:mt-0 md:flex-row md:items-end md:space-x-10;
     }
     .nav-item {
         @apply w-full text-center text-lg font-bold text-black duration-500 hover:text-blue md:w-fit md:text-sm;
     }
     .hero {
-        @apply my-5 flex min-w-full flex-col items-center justify-center px-3 md:flex-row md:flex-nowrap md:pl-32 md:pr-0;
+        @apply my-5 flex min-w-full flex-col items-center justify-center space-y-10 px-3 md:flex-row md:flex-nowrap md:pl-32 md:pr-0;
     }
     .hero-text-side {
         @apply flex h-full w-full flex-1 flex-col justify-center space-y-3 text-center md:text-start;
@@ -69,7 +72,7 @@
         @apply text-base font-medium;
     }
     .buttons {
-        @apply flex flex-row flex-nowrap justify-center space-x-3 md:justify-start;
+        @apply flex w-full flex-row flex-nowrap justify-center space-x-3 md:justify-start;
     }
     .btn-green,
     .btn-blue {

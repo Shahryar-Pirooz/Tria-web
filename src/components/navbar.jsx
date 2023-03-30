@@ -30,9 +30,7 @@ export default function NavBar() {
                     </button>
                 </div>
             </div>
-            <div
-                className={`nav-items ${isMenuOpen ? 'max-h-max' : 'max-h-0'}`}
-            >
+            <div className={`nav-items ${isMenuOpen ? 'max-h-40' : 'max-h-0'}`}>
                 {menuItems.map((item) => {
                     return (
                         <a key={item.key} className="nav-item" href={item.href}>
