@@ -24,7 +24,7 @@ export default function WhyTria() {
         },
     ]
     return (
-        <div className="relative">
+        <div className="relative" id="why_tria">
             <img className="star1" src={star} alt="star" aria-hidden />
             <img className="star2" src={star} alt="star" aria-hidden />
             <img className="star3" src={star} alt="star" aria-hidden />
