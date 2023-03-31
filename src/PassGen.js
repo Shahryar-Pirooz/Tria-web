@@ -1,24 +1,25 @@
-import hmacSHA256 from 'crypto-js/hmac-sha256'
-import { Buffer } from 'buffer'
-function PasswordGenerator(name = 'tria', code = 'tria', domain = 'tria') {
-    const symbols = '!#$%&()*<=>?@[]^_{}~'
-    const bytes = Buffer.from(`${name}${domain}`, 'utf-8')
-    const c = Buffer.from(code, 'utf8')
-    const d = [...c].toString()
-    const hmac = hmacSHA256(bytes, d).toString()
-    let password = ''
-    for (let i = 0; i < 4; i++) {
-        password += symbols[(bytes[0] + bytes[1]) % (symbols.length - i)]
+import HmacSHA256 from 'crypto-js/hmac-sha256'
+function passwordGenerator(name, code, domain) {
+    name = name === '' || !name ? 'tria' : name.toString().toLowerCase()
+    code = code === '' || !code ? 'tria' : code
+    domain = domain === '' || !domain ? 'tria' : domain.toString().toLowerCase()
+    const chars = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
+    const numbers = '!#$%&()*<=>?@[]^_{}~1234567890'
+    const msg = name + domain
+    const hmac = HmacSHA256(msg, code).toString()
+    var password = ''
+    for (let index = 0; password.length < 16; index++) {
+        if (
+            chars[(hmac.charCodeAt(index) % chars.length) + index] ===
+                password.slice(-1) ||
+            numbers[(hmac.charCodeAt(index) % numbers.length) + index] ===
+                password.slice(-1)
+        )
+            continue
+        password += chars[(hmac.charCodeAt(index) % chars.length) + index]
+        password += numbers[(hmac.charCodeAt(index) % numbers.length) + index]
     }
-
-    password =
-        hmac.slice(0, 3) +
-        password[0] +
-        hmac.slice(3, 6) +
-        password[1] +
-        hmac.slice(6, 9) +
-        password[2] +
-        hmac.slice(9, 12) +
-        password[3]
+    return 'password'
 }
-export { PasswordGenerator }
+
+export default passwordGenerator

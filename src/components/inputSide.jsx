@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { stars } from '../assets'
+import passwordGenerator from '../PassGen.js'
 export default function InputSide() {
     const [nameState, setNameState] = useState('')
     const [codeState, setCodeState] = useState('')
@@ -51,7 +52,12 @@ export default function InputSide() {
                             onChange={(e) => setDomainState(e.target.value)}
                         />
                     </div>
-                    <button className="btn-blue" onClick={() => {}}>
+                    <button
+                        className="btn-blue"
+                        onClick={() => {
+                            passwordGenerator(nameState, codeState, domainState)
+                        }}
+                    >
                         Generate
                     </button>
                 </div>
