@@ -5,6 +5,7 @@ export default function InputSide() {
     const [nameState, setNameState] = useState('')
     const [codeState, setCodeState] = useState('')
     const [domainState, setDomainState] = useState('')
+    const [passwordState, setPasswordState] = useState('')
     return (
         <div className="passgen" id="genpass">
             <div className="input-side">
@@ -55,10 +56,16 @@ export default function InputSide() {
                     <button
                         className="btn-blue"
                         onClick={() => {
-                            passwordGenerator(nameState, codeState, domainState)
+                            setPasswordState(
+                                passwordGenerator(
+                                    nameState,
+                                    codeState,
+                                    domainState
+                                )
+                            )
                         }}
                     >
-                        Generate
+                        {passwordState === '' ? `Generate` : passwordState}
                     </button>
                 </div>
             </div>
