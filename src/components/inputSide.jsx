@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { stars } from '../assets'
 import passwordGenerator from '../PassGen.js'
 export default function InputSide() {
@@ -6,6 +6,9 @@ export default function InputSide() {
     const [codeState, setCodeState] = useState('')
     const [domainState, setDomainState] = useState('')
     const [passwordState, setPasswordState] = useState('')
+    useEffect(() => {
+        navigator.clipboard.writeText(passwordState)
+    }, [passwordState])
     return (
         <div className="passgen" id="genpass">
             <div className="input-side">
