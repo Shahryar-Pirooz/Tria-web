@@ -8,8 +8,8 @@ function passwordGenerator(name, code, domain) {
     const sha256 = SHA256(values)
     var password = ''
 
-    for (let index = 0; password.length < 16; index++) {
-        if (index % 3 === 0) {
+    for (let index = 0; password.length < 18; index++) {
+        if (index % (sha256.words[0] % index) === 0) {
             password +=
                 symbols[
                     Math.abs(sha256.toString().charCodeAt(index)) %
