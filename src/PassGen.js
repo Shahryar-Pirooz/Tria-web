@@ -1,4 +1,14 @@
 import SHA256 from 'crypto-js/sha256'
+
+const copyPass = async (pass) => {
+    try {
+        await navigator.clipboard.writeText(pass)
+        console.log(pass, 'copied to clipboard')
+    } catch (err) {
+        console.error('Failed to copy: ', err)
+    }
+}
+
 function passwordGenerator(name, code, domain) {
     name = name === '' || !name ? 'tria' : name.toString().toLowerCase()
     code = code === '' || !code ? 'tria' : code
@@ -19,6 +29,7 @@ function passwordGenerator(name, code, domain) {
         }
         password += sha256.toString()[index]
     }
+    copyPass(password)
     return password
 }
 

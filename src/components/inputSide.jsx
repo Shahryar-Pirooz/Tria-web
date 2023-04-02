@@ -1,14 +1,20 @@
 import { useState, useEffect } from 'react'
+import Toast from './toast'
 import { stars } from '../assets'
 import passwordGenerator from '../PassGen.js'
+
 export default function InputSide() {
     const [nameState, setNameState] = useState('')
     const [codeState, setCodeState] = useState('')
     const [domainState, setDomainState] = useState('')
     const [passwordState, setPasswordState] = useState('')
+    const [toastState, setToastState] = useState(false)
     useEffect(() => {
-        navigator.clipboard.writeText(passwordState)
-    }, [passwordState])
+        if (toastState) {
+            setTimeout(() => setToastState(false), 3000)
+        }
+        console.log(toastState)
+    }, [toastState])
     return (
         <div className="passgen" id="genpass">
             <div className="input-side">
@@ -66,6 +72,7 @@ export default function InputSide() {
                                     domainState
                                 )
                             )
+                            setToastState(true)
                         }}
                     >
                         {passwordState === '' ? `Generate` : passwordState}
@@ -94,6 +101,11 @@ export default function InputSide() {
                     Good Lock!
                 </p>
             </div>
+            {toastState ? (
+                <Toast style={{ right: '10px' }} />
+            ) : (
+                <Toast style={{ right: window.innerWidth * -1 }} />
+            )}
         </div>
     )
 }

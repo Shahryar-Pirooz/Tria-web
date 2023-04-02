@@ -1,4 +1,4 @@
-import { Hero, NavBar, WhyTria, InputSide } from './components'
+import { Hero, NavBar, WhyTria, InputSide, Footer } from './components'
 export default function App() {
     return (
         <div className="app">
@@ -6,6 +6,7 @@ export default function App() {
             <Hero />
             <WhyTria />
             <InputSide />
+            <Footer />
         </div>
     )
 }
