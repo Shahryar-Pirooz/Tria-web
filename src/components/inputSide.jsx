@@ -81,7 +81,7 @@ export default function InputSide() {
             </div>
             <div className="help-side">
                 <p>Using tria is simple, all you need to do is to give tria</p>
-                <ul className="list-outside list-disc md:list-inside">
+                <ul className="help-text">
                     <li>
                         A name, which can be any name you like (e.g. Michael)
                     </li>
@@ -97,9 +97,7 @@ export default function InputSide() {
                     domain and tria will give you the same exact password that
                     you had generated!
                 </p>
-                <p className="text-3xl font-extrabold text-blue transition-all duration-1000 hover:text-green">
-                    Good Lock!
-                </p>
+                <p className="goodlock">Good Lock!</p>
             </div>
             {toastState ? (
                 <Toast style={{ right: '10px' }} />

@@ -138,4 +138,25 @@
     .help-side {
         @apply w-full space-y-2 px-5 py-10 text-center md:px-20 md:text-start;
     }
+    .help-text {
+        @apply list-outside list-disc md:list-inside;
+    }
+    .goodlock {
+        @apply text-3xl font-extrabold text-blue transition-all duration-1000 hover:text-green;
+    }
+    .footer {
+        @apply flex h-20 w-full items-center justify-center bg-blue text-center text-white;
+    }
+    .footer-text {
+        @apply flex text-sm;
+    }
+    .we {
+        @apply mx-2 font-extrabold;
+    }
+    .toast-area {
+        @apply absolute bottom-0 px-10 py-3 transition-all duration-700;
+    }
+    .toast-bg {
+        @apply rounded-xl bg-blue px-6 py-2 text-white;
+    }
 }
