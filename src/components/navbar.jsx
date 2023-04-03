@@ -6,16 +6,6 @@ export default function NavBar() {
     const [isMenuOpen, setIsMenuOpen] = useState(
         window.innerWidth < 768 ? false : true
     )
-
-    const menuItems = [
-        { key: 1, text: 'why tria', href: '#why_tria' },
-        { key: 2, text: 'donate', href: 'https://www.buymeacoffee.com/EssPi' },
-        {
-            key: 3,
-            text: 'source',
-            href: 'https://github.com/Shahryar-Pirooz/Tria-web',
-        },
-    ]
     return (
         <nav className="navbar">
             <div className="logo-side">
@@ -31,13 +21,33 @@ export default function NavBar() {
                 </div>
             </div>
             <div className={`nav-items ${isMenuOpen ? 'max-h-40' : 'max-h-0'}`}>
-                {menuItems.map((item) => {
-                    return (
-                        <a key={item.key} className="nav-item" href={item.href}>
-                            {item.text}
-                        </a>
-                    )
-                })}
+                <a
+                    className="nav-item"
+                    href="\"
+                    onClick={(e) => {
+                        const whyTria = document.getElementById('why_tria')
+                        e.preventDefault()
+                        whyTria &&
+                            whyTria.scrollIntoView({
+                                behavior: 'smooth',
+                                block: 'center',
+                            })
+                    }}
+                >
+                    why tria
+                </a>
+                <a
+                    className="nav-item"
+                    href="https://www.buymeacoffee.com/EssPi"
+                >
+                    donate
+                </a>
+                <a
+                    className="nav-item"
+                    href="https://github.com/Shahryar-Pirooz/Tria-web"
+                >
+                    source
+                </a>
             </div>
         </nav>
     )

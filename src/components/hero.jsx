@@ -16,7 +16,19 @@ export default function Hero() {
                     without having to remember it!
                 </h2>
                 <div className="buttons">
-                    <a className="btn-blue" href="#genpass">
+                    <a
+                        className="btn-blue"
+                        href="/"
+                        onClick={(e) => {
+                            const genpass = document.getElementById('genpass')
+                            e.preventDefault()
+                            genpass &&
+                                genpass.scrollIntoView({
+                                    behavior: 'smooth',
+                                    block: 'center',
+                                })
+                        }}
+                    >
                         get start
                     </a>
                 </div>
