@@ -1,5 +1,4 @@
 export default function Toast({ style }) {
-    console.log(style)
     return (
         <div style={style} className="toast-area">
             <div className="toast-bg">

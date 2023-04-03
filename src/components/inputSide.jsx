@@ -13,7 +13,6 @@ export default function InputSide() {
         if (toastState) {
             setTimeout(() => setToastState(false), 3000)
         }
-        console.log(toastState)
     }, [toastState])
     return (
         <div className="passgen" id="genpass">
