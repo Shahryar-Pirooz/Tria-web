@@ -35,7 +35,11 @@ export default function Hero() {
             </div>
 
             <div className="hero-image-side">
-                <img src={hero} alt="people thing about Tria!" />
+                <img
+                    className="object-contain"
+                    src={hero}
+                    alt="people thing about Tria!"
+                />
             </div>
         </div>
     )
