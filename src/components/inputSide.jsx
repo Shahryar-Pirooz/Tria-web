@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, createElement } from 'react'
 import Toast from './toast'
 import { stars } from '../assets'
 import passwordGenerator from '../PassGen.js'
@@ -99,9 +99,9 @@ export default function InputSide() {
                 <p className="goodlock">Good Lock!</p>
             </div>
             {toastState ? (
-                <Toast style={{ right: '10px' }} />
+                <Toast style={{ opacity: 1 }} />
             ) : (
-                <Toast style={{ right: window.innerWidth * -1 }} />
+                <Toast style={{ opacity: 0 }} />
             )}
         </div>
     )
