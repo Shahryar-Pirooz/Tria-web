@@ -139,7 +139,7 @@
         @apply w-full space-y-2 px-5 py-10 text-center md:px-20 md:text-start;
     }
     .help-text {
-        @apply list-outside list-disc md:list-inside;
+        @apply list-outside list-disc px-4 md:list-inside md:px-0;
     }
     .goodlock {
         @apply text-3xl font-extrabold text-blue transition-all duration-1000 hover:text-green;

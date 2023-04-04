@@ -39,7 +39,7 @@ export default function WhyTria() {
                             return (
                                 <div key={index} className="why-tria-card">
                                     <img
-                                        className="max-h-28"
+                                        className="max-h-24"
                                         src={card.img}
                                         alt={card.alt}
                                     />
