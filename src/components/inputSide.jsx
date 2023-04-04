@@ -99,9 +99,9 @@ export default function InputSide() {
                 <p className="goodlock">Good Lock!</p>
             </div>
             {toastState ? (
-                <Toast style={{ opacity: 1 }} />
+                <Toast style={{ width: window.innerWidth, opacity: 1 }} />
             ) : (
-                <Toast style={{ opacity: 0 }} />
+                <Toast style={{ width: '0px', opacity: 0 }} />
             )}
         </div>
     )

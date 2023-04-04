@@ -157,6 +157,6 @@
         @apply absolute bottom-0 my-2 flex w-screen justify-center py-3 text-center transition-all duration-700;
     }
     .toast-bg {
-        @apply mx-auto w-3/4 rounded-2xl bg-blue px-6 py-2 text-white;
+        @apply mx-auto w-3/4 rounded-2xl bg-green px-6 py-2 text-white;
     }
 }
