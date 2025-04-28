@@ -11,7 +11,7 @@ Using Tria is simple, all you need to do is to give Tria
 - A simple code that's easy to remember (e.g. 1234)
 - A domain of the website you want the password for (e.g. facebook.com)
 You don’t need to remember or take note of the password because you can always come back, input the name, code, and domain and Tria will give you the same exact password that you had generated!
-### GOOD LOCK !
+### GOOD LOCK!
 
 ## License
 
